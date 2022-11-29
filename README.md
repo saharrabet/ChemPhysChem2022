@@ -1,2 +1,2 @@
 # ChemphysChem2022
-Simulations data for the published article in ChemphysChem
+please cite to the article https://doi.org/10.1002/cphc.202200614
