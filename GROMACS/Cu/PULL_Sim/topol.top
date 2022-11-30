@@ -1,0 +1,12 @@
+#include "atomtypes.itp"
+#include "Furfural.itp"
+#include "_TIP3P.itp"
+#include "Cu100.itp"
+
+ [ system ]
+Cu-100-Furfural
+
+ [ molecules ]
+Fur 1
+_TI 1800
+Cu1 1

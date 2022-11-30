@@ -1,0 +1,93 @@
+;############################## Run control ##############################
+
+integrator			= sd			
+dt				= 0.0005		
+nsteps				= 1000000		
+
+;############################## Minimization #############################
+
+emtol				= 10			
+emstep				= 0.01			
+niter				= 20			
+
+;############################# Output Control ############################ 
+
+nstcalcenergy			= 100			
+nstenergy			= 1000			
+nstlog				= 10000			
+nstxout				= 100			
+nstvout				= 0			
+nstfout				= 0			
+
+;###########################  Neighborsearching ########################### 
+
+cutoff-scheme			= group
+nstlist				= 10			
+ns_type				= grid			
+pbc				= xyz			
+rlist                    	= 1.2			
+verlet-buffer-tolerance		= 0.005 
+
+;#############################  Electrostatics #############################  
+
+coulombtype			= PME			
+coulomb-modifier		= none			
+rcoulomb			= 1.2			
+pme_order			= 4			
+ewald_rtol			= 1e-05			
+epsilon_surface			= 0			
+fourierspacing			= 0.12			
+
+;############################## van der Waals ############################## 
+
+vdwtype				= cutoff		
+vdw-modifier			= none			
+rvdw				= 1.2			
+DispCorr			= EnerPres		
+
+;########################### Temperature coupling ###########################
+ 
+tc_grps				= Mol_SOL Cry		
+tau_t				= 2.5 2.5		
+ref_t				= 298.15 0.0		
+
+;############################# Pressure coupling #############################
+
+Pcoupl				= no		
+ref_p                    	= 1.013			
+tau_p                   	= 5.0			
+compressibility          	= 4.5e-05
+	
+;############################ Velocity generation ############################
+
+gen_vel                  	= yes			
+;gen_vel                  	= no			 
+gen_temp                 	= 298.15		
+gen_seed                 	= -1			
+
+;################################### Bonds ###################################
+
+constraints              	= none			
+continuation             	= no			
+constraint-algorithm     	= lincs			
+lincs-order              	= 4			
+
+;################################# Pull code ##################################
+
+pull                    = yes
+pull_ncoords            = 1         
+pull_ngroups            = 2         
+pull_group1_name        = MOL
+pull_group2_name        = Cry
+pull_coord1_type        = umbrella  
+pull_coord1_geometry    = distance  
+pull_coord1_dim         = N N Y     
+pull_coord1_groups      = 1 2       
+pull_coord1_start       = yes    
+pull_coord1_rate        = 0.005      
+pull_coord1_k           = 5000      
+
+energygrps		= Cry
+energygrp-excl		= Cry Cry
+freezegrps		= Cry
+freezedim		= Y Y Y 

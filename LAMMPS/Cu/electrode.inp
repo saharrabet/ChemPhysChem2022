@@ -1,0 +1,13 @@
+POSITION      0     64.3                ! z-position of left & right electrode !please refer to manual by Voth et. al. base in the reference (cite: dx.doi.org/10.1021/jp210252g | J. Phys. Chem. C 2012)
+VOLTAGE       3.5                       ! external voltage = V(left) - V(right)
+LJ            12.0  4.72  2.33          ! cut-off, epsnal & sigma of plane LJ ! LJ parameters from (J. Phys. Chem. C 2008, 112, 17281–17290)
+CELL    3.6160   1.8080   1.8080        ! plane cell vectors (x1, x2, y2)  assuming y1=0.0 ! cell parameters from (J. Phys. Chem. C 2008, 112, 17281–17290)
+PLANE   1.8080 0 -1.8080
+PLANE   0   0   -3.6160
+PLANE   1.8080 0 -5.424
+PLANE   0 0 -7.232
+PLANE   1.8080 0 66.208
+PLANE   0   0   68.016
+PLANE   1.8080 0 69.824
+PLANE   0 0 71.632
+TABLE    none

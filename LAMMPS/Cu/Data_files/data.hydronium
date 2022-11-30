@@ -1,0 +1,52 @@
+LAMMPS data file for hydronium ion ref:Wolf, Maarten G., and Gerrit Groenhof. "Explicit proton transfer in classical molecular dynamics simulations." Journal of computational chemistry 35.8 (2014): 657-671.
+
+
+ 4 atoms
+ 3 bonds
+ 3 angles
+ 2 atom types
+ 1 bond types
+ 1 angle types
+
+ -5.0 5.0  xlo xhi
+ -5.0 5.0  ylo yhi
+ -5.0 5.0  zlo zhi
+
+Masses
+
+1 15.9994
+2 1.008
+
+
+Pair Coeffs # lj/cut/coul/long
+
+1	0.154	3.220
+2	0.000	0.000
+
+Bond Coeffs # harmonic
+
+1	400	1.02
+
+Angle Coeffs # harmonic
+
+1	100	112
+
+ Atoms
+
+1	1	1	-0.59	0.95989	-0.00638	-0.08417
+2	1	2	0.53	0.66826	0.57017	0.66626
+3	1	2	0.53	0.66827	0.47808	-0.8971
+4	1	2	0.53	1.94696	0.07282	-0.08883
+
+ Bonds  
+   
+1	1	1	2
+2	1	1	3
+3	1	1	4
+
+ Angles   
+
+1	1	2	1	3
+2	1	3	1	4
+3	1	2	1	4
+
