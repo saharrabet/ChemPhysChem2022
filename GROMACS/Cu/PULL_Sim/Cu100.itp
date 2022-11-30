@@ -1,7 +1,7 @@
 ; Kupfer
 
 [ moleculetype ]
-;name            nrexcl
+;name           nrexcl
  Cu1 3
 
 [ atoms ]
