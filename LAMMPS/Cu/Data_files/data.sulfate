@@ -18,8 +18,8 @@ Masses
 
 Pair Coeffs # lj/cut/coul/long
 
-1	0.25	3.55
-2	0.17	2.96
+1	0.17	2.96
+2	0.25	3.55
 
 Bond Coeffs # harmonic
 
